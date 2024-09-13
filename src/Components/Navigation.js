@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Button, Offcanvas, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './web-development-company-high-resolution-logo-white-transparent.png';
+import logo from './logo.png';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     const [show, setShow] = useState(false);
@@ -67,7 +68,7 @@ const Navigation = () => {
                             <Nav.Link onClick={() => { handleClose(); scrollToSection('portfolio'); }} style={{ color: 'white' }}>Packages</Nav.Link>
                             <Nav.Link onClick={() => { handleClose(); scrollToSection('backdrops'); }} style={{ color: 'white' }}>Backdrops</Nav.Link>
                             <Nav.Link onClick={() => { handleClose(); scrollToSection('contact'); }} style={{ color: 'white' }}>Contact</Nav.Link>
-                            <Button variant="outline-light" className="mt-2" onClick={handleClose}>Get a Quote</Button>
+                            <Button variant="outline-light" className="ml-2"><Link to={'/contactfourm'}>Get a Quote</Link></Button>
                         </Nav>
                     </Offcanvas.Body>
                 </Offcanvas>
